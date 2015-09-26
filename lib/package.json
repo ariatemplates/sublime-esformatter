@@ -7,9 +7,13 @@
     "prepublish": "node doStuff.js"
   },
   "dependencies": {
-    "browserify": "x",
-    "esformatter": "0.7.1",
-    "mout": "^0.11.0"
+    "browserify": "11.2.0",
+    "esformatter": "0.7.3",
+    "mout": "^0.11.0",
+    "esformatter-jsx": "^2.1.2"
+  },
+  "esformatter": {
+    "plugins": ["esformatter-jsx"]
   },
   "license": "MIT"
 }
