@@ -18,6 +18,18 @@
         "esformatter": {
             "allowShebang": true
         },
+    
+        "plugins": [
+              "esformatter-jsx"
+        ],
+        
+        "jsx": {
+              "attrsOnSameLineAsTag": false,
+              "maxAttrsOnTag": 4,
+              "firstAttributeOnSameLine": true,
+              "alignWithFirstAttribute": true
+        },
+
         "indent": {
             "value": "  ",
             "alignComments": true,
