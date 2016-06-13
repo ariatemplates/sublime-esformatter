@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, subprocess, threading, json, re, platform, sys, os
+import sublime, sublime_plugin, subprocess, threading, json, platform, sys, os
 
 ON_WINDOWS = platform.system() is 'Windows'
 ST2 = sys.version_info < (3, 0)
@@ -230,10 +230,10 @@ class NodeCall(threading.Thread):
 
             if ST2:
                 stdout, stderr = process.communicate(self.code)
-                self.result = re.sub(r'(\r|\r\n|\n)\Z', '', stdout).decode('utf-8')
+                self.result = stdout.decode('utf-8')
             else:
                 stdout, stderr = process.communicate(self.code)
-                self.result = re.sub(r'(\r|\r\n|\n)\Z', '', str(stdout, encoding='utf-8'))
+                self.result = str(stdout, encoding='utf-8')
 
             if stderr:
                 self.result = False
