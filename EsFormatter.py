@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, subprocess, threading, json, platform, sys, os
+import sublime, sublime_plugin, subprocess, threading, json, re, platform, sys, os
 
 ON_WINDOWS = platform.system() is 'Windows'
 ST2 = sys.version_info < (3, 0)
